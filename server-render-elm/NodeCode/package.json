@@ -1,0 +1,15 @@
+{
+  "name": "node-code",
+  "version": "1.0.0",
+  "description": "Node processes to run in .net core",
+  "main": "calculations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JakeS",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^9.11.0",
+    "node-elm-compiler": "^4.3.0"
+  }
+}

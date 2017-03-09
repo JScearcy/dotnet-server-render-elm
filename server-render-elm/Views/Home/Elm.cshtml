@@ -1,0 +1,8 @@
+<div id="elm-app">
+    @Html.Raw(ViewBag.fromNode)
+</div>
+<script type="application/javascript" src="~/js/Main.js"></script>
+<script>
+    var node = document.getElementById('elm-app');
+    var app = Elm.Main.embed(node, @Html.Raw(ViewBag.flags))
+</script>
