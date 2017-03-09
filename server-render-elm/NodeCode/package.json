@@ -9,7 +9,6 @@
   "author": "JakeS",
   "license": "MIT",
   "dependencies": {
-    "jsdom": "^9.11.0",
-    "node-elm-compiler": "^4.3.0"
+    "jsdom": "^9.11.0"
   }
 }
