@@ -9,13 +9,17 @@ module.exports = {
             html: '<div id="elm-code"></div>',
             src: [ elmCode ],
             done: function (err, window) {
+                if (err) return cb(err, null);
                 var node = window.document.getElementById('elm-code');
                 if (flags) {
                     var app = window.Elm.Main.embed(node, JSON.parse(flags));
                 } else {
                     var app = window.Elm.Main.embed(node);
                 }
-                setTimeout(() => cb(err, window.document.getElementById('elm-code').innerHTML), 0);
+                setTimeout(() => {
+                    var html = window.document.getElementById('elm-code').innerHTML;
+                    cb(null, {html});
+                }, 0);
             }
         });
     }

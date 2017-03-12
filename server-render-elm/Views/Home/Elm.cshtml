@@ -1,6 +1,5 @@
-<div id="elm-app">
-    @Html.Raw(ViewBag.fromNode)
-</div>
+
+<elm-render flags="@ViewBag.flags" container="section" container-id="elm-app"></elm-render>
 <script type="application/javascript" src="~/js/Main.js"></script>
 <script>
     var node = document.getElementById('elm-app');

@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.NodeServices;
+using server_render_elm.Models;
 
 namespace server_render_elm.Controllers
 {
@@ -17,8 +15,7 @@ namespace server_render_elm.Controllers
         public async Task<IActionResult> Elm([FromServices] INodeServices nodeServices)
         {
             var flags = "{\"count\": 25}";
-            var result = await nodeServices.InvokeExportAsync<string>("./NodeCode/render-elm.js", "renderElmFromJS", flags);
-            ViewBag.fromNode = result;
+            
             ViewBag.flags = flags;
             return View();
         }
