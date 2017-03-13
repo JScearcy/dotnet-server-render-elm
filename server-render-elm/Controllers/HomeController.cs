@@ -12,7 +12,7 @@ namespace server_render_elm.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Elm([FromServices] INodeServices nodeServices)
+        public IActionResult Elm([FromServices] INodeServices nodeServices)
         {
             var flags = "{\"count\": 25}";
             

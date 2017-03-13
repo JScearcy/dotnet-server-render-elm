@@ -1,7 +1,9 @@
 
-<elm-render flags="@ViewBag.flags" container="section" container-id="elm-app"></elm-render>
-<script type="application/javascript" src="~/js/Main.js"></script>
-<script>
-    var node = document.getElementById('elm-app');
-    var app = Elm.Main.embed(node, @Html.Raw(ViewBag.flags))
-</script>
+<elm-render 
+    flags="@ViewBag.flags"
+    container="section"
+    container-id="elm-app"
+    module-path="./NodeCode/render-elm.js"
+    function-name="prerender"
+    attach-start-script="true"
+    script-location="/js/Main.js"></elm-render>
